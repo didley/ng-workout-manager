@@ -1,3 +1,26 @@
 <div *ngIf="workout" class="workout">
   <h2>{{ workout.name }}</h2>
+  <ul *ngIf="workout.exercises">
+    <li *ngFor="let exercise of workout.exercises">
+      <h3>{{ findExerciseDetails(exercise.exerciseId)?.name }}</h3>
+
+      <ul>
+        <li class="set setTitle">
+          <h5>Set</h5>
+          <h5>KG</h5>
+          <h5>Reps</h5>
+          <h5></h5>
+        </li>
+      </ul>
+
+      <ul class="sets">
+        <li *ngFor="let set of exercise.sets; let i = index" class="set">
+          <p>{{ i + 1 }}</p>
+          <p>{{ set.weight }}</p>
+          <p>{{ set.reps }}</p>
+          <p>{{ set.status }}</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>

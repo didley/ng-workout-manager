@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Workout } from '../data';
+import { Exercise, exercises, Workout } from '../data';
 
 @Component({
   selector: 'app-workout',
@@ -8,8 +8,13 @@ import { Workout } from '../data';
 })
 export class WorkoutComponent implements OnInit {
   @Input() workout?: Workout;
+  exercises = [...exercises];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  findExerciseDetails(id: Exercise['id']): Exercise | undefined {
+    return exercises.find((exercise) => exercise.id === id);
+  }
 }

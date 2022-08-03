@@ -1,3 +1,17 @@
 .workout {
   border-bottom: 1px solid #cfcfcf;
 }
+
+.set {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.set > p {
+  width: 50px;
+}
+
+.setTitle {
+  color: palevioletred;
+}
