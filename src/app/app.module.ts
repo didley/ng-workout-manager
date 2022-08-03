@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ExercisesComponent } from './exercises/exercises.component';
+import { WorkoutComponent } from './workout/workout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkoutsComponent,
     TopBarComponent,
-    ExercisesComponent
+    ExercisesComponent,
+    WorkoutComponent
   ],
   imports: [
     BrowserModule,

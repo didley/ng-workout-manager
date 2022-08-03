@@ -1,1 +1,7 @@
-<p>exercises works!</p>
+<h1>Exercises</h1>
+
+<ul class="rounded-container">
+  <li *ngFor="let exercise of exercises" class="exercise">
+    <h2>{{ exercise.name }}</h2>
+  </li>
+</ul>

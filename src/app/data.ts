@@ -1,10 +1,10 @@
-type Workout = {
+export type Workout = {
   id: string;
   name: string;
   exercises: WorkoutExercise[];
 };
 
-type Exercise = {
+export type Exercise = {
   id: string;
   name: string;
   details?: string;
@@ -21,7 +21,7 @@ type WorkoutExercise = {
   notes?: string;
 };
 
-const workouts: Workout[] = [
+export const workouts: Workout[] = [
   {
     id: 'je3fs4hwi3ij4fhs',
     name: 'Upper Body',
@@ -68,7 +68,7 @@ const workouts: Workout[] = [
   },
 ];
 
-const exercises: Exercise[] = [
+export const exercises: Exercise[] = [
   { name: 'Bench Press', id: 'j0323mc02hc94f' },
   { name: 'Overhead Press', id: 'k323mc0g2hc94f' },
   { name: 'Deadlift', id: 'ds5gch5h402hc94f' },
