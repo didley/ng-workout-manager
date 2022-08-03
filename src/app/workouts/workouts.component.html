@@ -2,6 +2,9 @@
 
 <ul class="rounded-container">
   <li *ngFor="let workout of workouts">
-    <app-workout [workout]="workout"></app-workout>
+    <app-workout
+      [workout]="workout"
+      [onSetClick]="handleToggleSetStatus"
+    ></app-workout>
   </li>
 </ul>

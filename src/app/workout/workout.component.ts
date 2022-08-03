@@ -8,6 +8,12 @@ import { Exercise, exercises, Workout } from '../data';
 })
 export class WorkoutComponent implements OnInit {
   @Input() workout?: Workout;
+  @Input() onSetClick?: (
+    workoutId: string,
+    exerciseId: string,
+    setIndex: number
+  ) => void;
+
   exercises = [...exercises];
 
   constructor() {}

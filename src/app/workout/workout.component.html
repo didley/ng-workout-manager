@@ -13,12 +13,14 @@
         </li>
       </ul>
 
-      <ul class="sets">
-        <li *ngFor="let set of exercise.sets; let i = index" class="set">
-          <p>{{ i + 1 }}</p>
+      <ul class="sets" *ngIf="exercise.sets && onSetClick">
+        <li *ngFor="let set of exercise.sets; let setIndex = index" class="set">
+          <p>{{ setIndex + 1 }}</p>
           <p>{{ set.weight }}</p>
           <p>{{ set.reps }}</p>
-          <p>{{ set.status }}</p>
+          <p (click)="onSetClick(workout.id, exercise.id, setIndex)">
+            {{ set.status }}
+          </p>
         </li>
       </ul>
     </li>
