@@ -18,9 +18,12 @@
           <p>{{ setIndex + 1 }}</p>
           <p>{{ set.weight }}</p>
           <p>{{ set.reps }}</p>
-          <p (click)="onSetClick(workout.id, exercise.id, setIndex)">
+          <app-set-status-btn
+            [status]="set.status"
+            (click)="onSetClick(workout.id, exercise.id, setIndex)"
+          >
             {{ set.status }}
-          </p>
+          </app-set-status-btn>
         </li>
       </ul>
     </li>

@@ -7,6 +7,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { WorkoutComponent } from './workout/workout.component';
+import { SetStatusBtnComponent } from './workout/set-status-btn/set-status-btn.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WorkoutComponent } from './workout/workout.component';
     WorkoutsComponent,
     TopBarComponent,
     ExercisesComponent,
-    WorkoutComponent
+    WorkoutComponent,
+    SetStatusBtnComponent
   ],
   imports: [
     BrowserModule,

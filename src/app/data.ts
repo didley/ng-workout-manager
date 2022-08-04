@@ -10,7 +10,7 @@ export type Exercise = {
   details?: string;
 };
 
-type ExerciseStatus = 'pending' | 'complete' | 'failed';
+export type ExerciseStatus = 'pending' | 'complete' | 'failed';
 type WeightInKG = number;
 type ExerciseSet = { weight: WeightInKG; reps: number; status: ExerciseStatus };
 

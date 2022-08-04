@@ -1,0 +1,12 @@
+<button
+  *ngIf="status"
+  class="button"
+  [ngClass]="{
+    failed: status === 'failed',
+    complete: status === 'complete'
+  }"
+>
+  <div *ngIf="status !== 'pending'">
+    {{ status === "failed" ? "✕" : "✔︎" }}
+  </div>
+</button>
